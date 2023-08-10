@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
+const checkUserPayload = require('./checkUserPayload');
+const authenticateToken = require('./authenticateToken');
 require("dotenv").config();
 
 const { 
