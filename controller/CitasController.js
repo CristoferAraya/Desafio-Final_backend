@@ -13,10 +13,10 @@ const {
       const { peluqueriaId } = req.params;
       const usuarioId = req.user.id;
       await createCita(cita, peluqueriaId, usuarioId);
-      res.status(201).send('Cita creada');
+      res.status(201).send('Cita creada con exito');
     } catch (error) {
       console.log(error.message);
-      res.status(500).send('Error al crear la cita');
+      res.status(500).send('Se a producido un error al intentar crear la cita');
     }
   };
   
